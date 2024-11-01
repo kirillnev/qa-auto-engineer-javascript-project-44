@@ -1,8 +1,8 @@
 # Makefile
 
-.PHONY: install brain-games publish
+.PHONY: install brain-games publish lint
 
-install: # Устанавка зависимостей
+install: # Установка зависимостей
 	npm	ci
 
 brain-games: # Запуск игры
@@ -10,3 +10,6 @@ brain-games: # Запуск игры
 
 publish: # Публикация пакета
 	npm publish --dry-run
+
+lint: # Проверка Eslint
+	npx eslint .
