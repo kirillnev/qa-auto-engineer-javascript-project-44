@@ -5,8 +5,11 @@
 install: # Установка зависимостей
 	npm	ci
 
-brain-games: # Запуск игры
+brain-games: # Запуск приложения
 	node bin/brain-games.js
+
+brain-even: # Запуск игры Игра: Проверка на чётность
+	node bin/brain-even.js
 
 publish: # Публикация пакета
 	npm publish --dry-run
