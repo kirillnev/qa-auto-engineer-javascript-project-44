@@ -11,19 +11,19 @@ export default (game) => {
   console.log(game.rules);
 
   for (let round = 0; round < MAX_ROUNDS; round += 1) {
-    const question = game.generateQuestion();
+    const { question, answer } = game.generateQuestion();
 
     console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = game.getCorrectAnswer(question);
 
-    if (correctAnswer !== userAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    if (answer !== userAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${userName}!`);
 
       return;
     }
+
     console.log('Correct!');
   }
 

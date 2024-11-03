@@ -17,6 +17,9 @@ brain-calc: # Запуск игры: Калькулятор
 brain-gcd: # Запуск игры: НОД
 	node bin/brain-gcd.js
 
+brain-progression: # Запуск игры: Арифметическая прогрессия
+	node bin/brain-progression.js
+
 publish: # Публикация пакета
 	npm publish --dry-run
 
