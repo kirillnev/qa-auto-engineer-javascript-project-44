@@ -1,6 +1,6 @@
 # Makefile
 
-.PHONY: install brain-games publish lint
+.PHONY: install brain-games publish lint brain-even brain-calc
 
 install: # Установка зависимостей
 	npm	ci
@@ -10,6 +10,9 @@ brain-games: # Запуск приложения
 
 brain-even: # Запуск игры Игра: Проверка на чётность
 	node bin/brain-even.js
+
+brain-calc: # Запуск игры Игра: Калькулятор
+	node bin/brain-calc.js
 
 publish: # Публикация пакета
 	npm publish --dry-run
