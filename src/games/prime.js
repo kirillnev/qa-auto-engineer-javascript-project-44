@@ -13,10 +13,8 @@ const isPrime = (num) => {
 };
 
 export default {
-  // Описание правил игры
   rules: 'Answer "yes" if given number is prime. Otherwise answer "no".',
 
-  // Генерация случайного вопроса и правильного ответа
   generateQuestion: () => {
     const number = _.random(100);
     const question = number.toString();
